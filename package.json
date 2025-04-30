@@ -1,0 +1,38 @@
+{
+  "name": "twitch-ai-viewers",
+  "version": "1.0.0",
+  "description": "A Node.js application that simulates multiple AI-powered viewers in a Twitch chat",
+  "main": "src/main.ts",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "keywords": [
+    "twitch",
+    "bot",
+    "ai",
+    "chat",
+    "viewers"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "axios": "^1.6.7",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "groq-sdk": "^0.4.0",
+    "tmi.js": "^1.8.5"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.27",
+    "@types/node": "^20.11.19",
+    "@types/tmi.js": "^1.8.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
