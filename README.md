@@ -9,20 +9,9 @@
 
 > 🎥 **Never Stream Alone Again!** Twitch AI Viewers is your perfect companion for those early streaming days. Whether you're just starting out or looking to make your stream more engaging, this bot provides intelligent, context-aware viewers that interact naturally with your content.
 
-> 🤖 **Your First Virtual Audience** - Perfect for new streamers who want to build confidence and create a welcoming atmosphere. The AI viewers engage with your content, respond to your commentary, and help create a more dynamic streaming experience.
-
-> 💡 **Why Use Twitch AI Viewers?**
-> - 🎯 Perfect for new streamers building their community
-> - 🤝 Never feel like you're talking to an empty chat
-> - 🎮 Natural interactions that respond to your gameplay
-> - 🎤 Context-aware responses to your commentary
-> - 🌟 Create a more engaging streaming environment
-
-![Twitch AI Viewers Demo](https://via.placeholder.com/800x400?text=Twitch+AI+Viewers+Demo)
-
 </div>
 
-## ✨ Features
+## ✨ Features & Benefits
 
 <div align="center">
 
@@ -34,95 +23,27 @@
 
 </div>
 
-## 🎯 Perfect For
-
 <div align="center">
 
-| 👶 New Streamers | 🎮 Small Communities | 🎥 Content Creators | 🌍 Language Learners |
-|----------------|-------------------|-------------------|-------------------|
-| Build confidence with your first virtual audience | Keep your chat active and engaging | Test new content with AI feedback | Practice streaming in different languages |
-| Learn streaming basics with AI support | Create a welcoming atmosphere | Get instant reactions to your content | Improve language skills while streaming |
-| Overcome initial streaming anxiety | Grow your community naturally | Experiment with different styles | Connect with international viewers |
+| 🎯 Perfect For | 🌟 Key Benefits |
+|----------------|-----------------|
+| 👶 New Streamers | Build confidence with your first virtual audience |
+| 🎮 Small Communities | Keep your chat active and engaging |
+| 🎥 Content Creators | Test new content with AI feedback |
+| 🌍 Language Learners | Practice streaming in different languages |
 
 </div>
 
-## 🌟 Key Benefits
+## 🚀 Getting Started
 
 <div align="center">
 
-| 🎯 Build Confidence | 🤝 Engage Audience | 📈 Improve Content | 🌱 Grow Community |
-|-------------------|------------------|------------------|-----------------|
-| Practice streaming skills | Create dynamic chat | Get instant feedback | Welcome new viewers |
-| Develop commentary style | Keep conversation flowing | Test different approaches | Maintain chat activity |
-| Overcome streaming anxiety | Make stream interactive | Learn audience preferences | Build stream momentum |
-
-</div>
-
-## 🚀 Quick Start
-
-<div align="center">
-
-```bash
-# Clone the repository
-git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
-cd twitch-ai-viewers
-
-# Install dependencies
-npm install
-
-# Start in development mode
-npm run dev
-```
-
-</div>
-
-## 📋 Prerequisites
-
-<div align="center">
-
-| Requirement | Description | Link |
-|------------|-------------|------|
-| Node.js | Version 14 or higher | [Download](https://nodejs.org/) |
-| Twitch Developer Account | For API access | [Register](https://dev.twitch.tv/console) |
-| Groq API Key | For AI services | [Sign Up](https://groq.com/) |
-
-</div>
-
-## 🔧 Installation
-
-<div align="center">
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
-cd twitch-ai-viewers
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Configure Environment
-Create `.env` file with:
-
-```env
-# Twitch Credentials
-TWITCH_CLIENT_ID=your_client_id
-TWITCH_CLIENT_SECRET=your_client_secret
-
-# Bot Settings
-BOT_USERNAME=your_bot_username
-BOT_OAUTH_TOKEN=oauth:your_token
-
-# AI Settings
-GROQ_API_KEY=your_groq_api_key
-ORIGINAL_STREAM_LANGUAGE=en
-
-# Time Settings
-TRANSCRIPT_DURATION=60000
-MESSAGE_INTERVAL=5000
-```
+| Step | Action | Details |
+|------|--------|---------|
+| 1. Prerequisites | Requirements | [Node.js](https://nodejs.org/) (v14+), [Twitch Dev Account](https://dev.twitch.tv/console), [Groq API Key](https://groq.com/) |
+| 2. Installation | Clone & Setup | ```bash<br>git clone https://github.com/gsilvamartin/twitch-ai-viewers.git<br>cd twitch-ai-viewers<br>npm install``` |
+| 3. Configuration | Environment | Create `.env` file with:<br><br>```env<br># Twitch Credentials<br>TWITCH_CLIENT_ID=your_client_id<br>TWITCH_CLIENT_SECRET=your_client_secret<br><br># Bot Settings<br>BOT_USERNAME=your_bot_username<br>BOT_OAUTH_TOKEN=oauth:your_token<br><br># AI Settings<br>GROQ_API_KEY=your_groq_api_key<br>ORIGINAL_STREAM_LANGUAGE=en<br><br># Time Settings<br>TRANSCRIPT_DURATION=60000<br>MESSAGE_INTERVAL=5000``` |
+| 4. Run | Development | ```bash<br>npm run dev``` |
 
 </div>
 
@@ -143,8 +64,6 @@ graph TD
 ```
 
 </div>
-
-### Core Components
 
 <div align="center">
 
@@ -175,17 +94,15 @@ graph TD
 
 <div align="center">
 
-```plaintext
-twitch-ai-viewers/
-├── src/
-│   ├── main.ts          # Application entry point
-│   ├── bot.ts           # Twitch bot logic
-│   ├── ai.ts            # AI service and audio processing
-│   └── logger.ts        # Logging utility
-├── package.json         # Project dependencies
-├── tsconfig.json        # TypeScript configuration
-└── .env                 # Configuration file (not versioned)
-```
+| Directory | File | Purpose |
+|-----------|------|---------|
+| `src/` | `main.ts` | Application entry point |
+| | `bot.ts` | Twitch bot logic |
+| | `ai.ts` | AI service and audio processing |
+| | `logger.ts` | Logging utility |
+| Root | `package.json` | Project dependencies |
+| | `tsconfig.json` | TypeScript configuration |
+| | `.env` | Configuration file |
 
 </div>
 
@@ -198,23 +115,17 @@ twitch-ai-viewers/
 
 </div>
 
-1. **Fork the project**
-2. **Create your feature branch**
-```bash
-git checkout -b feature/AmazingFeature
-```
+<div align="center">
 
-3. **Commit your changes**
-```bash
-git commit -m 'Add some AmazingFeature'
-```
+| Step | Action | Command |
+|------|--------|---------|
+| 1. Fork | Create your copy | Click "Fork" button |
+| 2. Branch | Create feature branch | ```bash<br>git checkout -b feature/AmazingFeature``` |
+| 3. Commit | Save your changes | ```bash<br>git commit -m 'Add some AmazingFeature'``` |
+| 4. Push | Upload changes | ```bash<br>git push origin feature/AmazingFeature``` |
+| 5. PR | Create Pull Request | Click "New Pull Request" |
 
-4. **Push to the branch**
-```bash
-git push origin feature/AmazingFeature
-```
-
-5. **Open a Pull Request**
+</div>
 
 ## 📄 License
 
