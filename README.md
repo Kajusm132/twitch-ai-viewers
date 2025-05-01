@@ -16,7 +16,7 @@ A powerful Node.js application that simulates multiple AI-powered viewers in Twi
 
 - **Smart Engagement**
   - Game-specific comments and questions
-  - Natural emoji usage (20% of messages)
+  - Natural emoji usage
   - Varied response types based on stream context
 
 - **Customizable Settings**
