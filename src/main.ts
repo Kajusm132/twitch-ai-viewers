@@ -1,12 +1,9 @@
-import dotenv from 'dotenv';
 import { Bot } from './bot';
 import { AIService } from './ai';
 import { logger } from './logger';
+import dotenv from 'dotenv';
 
-// Load environment variables
 dotenv.config();
-
-const TEST_MODE = process.env.TEST_MODE === 'true';
 
 // Validate required environment variables
 const requiredEnvVars = [
@@ -29,76 +26,92 @@ const aiService = new AIService();
 // Create and connect bots
 const bots: Bot[] = [];
 
-async function main() {
-  logger.info(TEST_MODE ? 'Running in TEST MODE - Messages will only be logged to console' : 'Running in LIVE MODE - Messages will be sent to chat');
-
-  // Find all bot credentials in environment variables
-  const botCredentials: { username: string; oauth: string }[] = [];
-  let botIndex = 1;
-
-  while (true) {
-    const username = process.env[`BOT${botIndex}_USERNAME`];
-    const oauth = process.env[`BOT${botIndex}_OAUTH`];
-
-    if (!username || !oauth) {
-      break;
-    }
-
-    botCredentials.push({ username, oauth });
-    botIndex++;
-  }
-
-  if (botCredentials.length === 0) {
-    logger.error('No bot credentials found in environment variables');
-    throw new Error('No bot credentials found in environment variables');
-  }
-
-  logger.info(`Found ${botCredentials.length} bot(s) in environment variables`);
-
-  // Create bots
-  for (let i = 0; i < botCredentials.length; i++) {
-    const { username, oauth } = botCredentials[i];
-    const isFirstBot = i === 0;
-
-    if (TEST_MODE) {
-      // In test mode, just simulate bot messages
-      const bot = new Bot({
-        username,
-        oauth,
-        channel: process.env.TWITCH_CHANNEL!,
-        aiService,
-        testMode: true,
-        shouldHandleVoiceCapture: isFirstBot
-      });
-      logger.info(`[TEST MODE] Created bot ${username}`);
-    } else {
-      // Live mode: Connect real bots
-      const bot = new Bot({
-        username,
-        oauth,
-        channel: process.env.TWITCH_CHANNEL!,
-        aiService,
-        testMode: false,
-        shouldHandleVoiceCapture: isFirstBot
-      });
-
-      bots.push(bot);
-      bot.connect();
-      logger.info(`Created and connected bot ${username}`);
+async function shutdown() {
+  logger.info('Shutting down...');
+  
+  // Disconnect all bots
+  for (const bot of bots) {
+    try {
+      bot.disconnect();
+    } catch (error) {
+      logger.error('Error disconnecting bot:', error);
     }
   }
-
-  // Handle process termination
-  process.on('SIGINT', () => {
-    logger.info('Shutting down...');
-    if (!TEST_MODE) {
-      bots.forEach(bot => bot.disconnect());
-    }
-    process.exit(0);
-  });
+  
+  // Give some time for cleanup
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  
+  process.exit(0);
 }
 
-main().catch(error => {
-  logger.error('Application error:', error);
-  process.exit(1);
-}); 
+async function main() {
+  try {
+    logger.info('Starting Twitch AI Viewers');
+
+    // Find all bot credentials in environment variables
+    const botCredentials: { username: string; oauth: string }[] = [];
+    let botIndex = 1;
+
+    while (true) {
+      const username = process.env[`BOT${botIndex}_USERNAME`];
+      const oauth = process.env[`BOT${botIndex}_OAUTH`];
+
+      if (!username || !oauth) {
+        break;
+      }
+
+      botCredentials.push({ username, oauth });
+      botIndex++;
+    }
+
+    if (botCredentials.length === 0) {
+      throw new Error('No bot credentials found in environment variables');
+    }
+
+    logger.info(`Found ${botCredentials.length} bot(s) in environment variables`);
+
+    // Extract channel name from URL if it's a full URL
+    const channelUrl = process.env.TWITCH_CHANNEL!;
+    const channelName = channelUrl.includes('twitch.tv/') 
+      ? channelUrl.split('twitch.tv/')[1].split('/')[0].split('?')[0]
+      : channelUrl;
+
+    logger.info(`Setting up voice capture for channel: ${channelUrl}`);
+
+    // Create and connect bots
+    for (const credentials of botCredentials) {
+      try {
+        const bot = new Bot({
+          username: credentials.username,
+          oauth: credentials.oauth,
+          channel: channelName,
+          aiService,
+          shouldHandleVoiceCapture: true
+        });
+
+        bots.push(bot);
+        bot.connect();
+      } catch (error) {
+        logger.error(`Error creating bot ${credentials.username}:`, error);
+      }
+    }
+
+    // Handle process termination
+    process.on('SIGINT', shutdown);
+    process.on('SIGTERM', shutdown);
+    process.on('uncaughtException', (error) => {
+      logger.error('Uncaught exception:', error);
+      shutdown();
+    });
+    process.on('unhandledRejection', (error) => {
+      logger.error('Unhandled rejection:', error);
+      shutdown();
+    });
+
+  } catch (error) {
+    logger.error('Error in main:', error);
+    await shutdown();
+  }
+}
+
+main(); 

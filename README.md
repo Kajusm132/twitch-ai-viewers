@@ -1,52 +1,30 @@
-<div align="center">
+# Twitch AI Viewers 🤖
 
-# 🎮 Twitch AI Viewers 🤖
-
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue)](https://www.typescriptlang.org/)
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
-[![Discord](https://img.shields.io/discord/your-discord-server?label=Discord&logo=discord)](https://discord.gg/your-invite-link)
-
-> 🎥 **Never Stream Alone Again!** Twitch AI Viewers is your perfect companion for those early streaming days. Whether you're just starting out or looking to make your stream more engaging, this bot provides intelligent, context-aware viewers that interact naturally with your content.
-
-> 🤖 **Your First Virtual Audience** - Perfect for new streamers who want to build confidence and create a welcoming atmosphere. The AI viewers engage with your content, respond to your commentary, and help create a more dynamic streaming experience.
-
-> 💡 **Why Use Twitch AI Viewers?**
-> - 🎯 Perfect for new streamers building their community
-> - 🤝 Never feel like you're talking to an empty chat
-> - 🎮 Natural interactions that respond to your gameplay
-> - 🎤 Context-aware responses to your commentary
-> - 🌟 Create a more engaging streaming environment
-
-![Twitch AI Viewers Demo](https://via.placeholder.com/800x400?text=Twitch+AI+Viewers+Demo)
-
-</div>
+A powerful Node.js application that simulates multiple AI-powered viewers in Twitch chat, creating a more engaging and interactive streaming experience.
 
 ## ✨ Features
 
-<div align="center">
+- **Real-time Chat Interaction**
+  - AI-powered viewers that respond naturally to stream content
+  - Context-aware responses based on game and streamer commentary
+  - Natural conversation flow with other viewers
 
-| 🎤 Audio Processing | 🤖 AI Integration | 💬 Chat Interaction | ⚙️ Configuration |
-|-------------------|------------------|-------------------|-----------------|
-| Real-time capture | Smart transcription | Natural responses | Flexible settings |
-| Auto format conversion | Context-aware messages | Emoji support | Easy setup |
-| Noise reduction | Multi-language support | Anti-spam system | Error handling |
+- **Voice Recognition**
+  - Real-time transcription of streamer's voice
+  - Contextual responses to streamer's commentary
+  - Multi-language support
 
-</div>
+- **Smart Engagement**
+  - Game-specific comments and questions
+  - Natural emoji usage (20% of messages)
+  - Varied response types based on stream context
 
-## 🎯 Perfect For
+- **Customizable Settings**
+  - Adjustable message frequency
+  - Configurable response types
+  - Multiple bot support
 
-<div align="center">
-
-| 👶 New Streamers | 🎮 Small Communities | 🎥 Content Creators | 🌍 Language Learners |
-|----------------|-------------------|-------------------|-------------------|
-| Build confidence with your first virtual audience | Keep your chat active and engaging | Test new content with AI feedback | Practice streaming in different languages |
-| Learn streaming basics with AI support | Create a welcoming atmosphere | Get instant reactions to your content | Improve language skills while streaming |
-| Overcome initial streaming anxiety | Grow your community naturally | Experiment with different styles | Connect with international viewers |
-
-</div>
-
-## 🌟 Key Benefits
+## 🎯 Benefits
 
 - **Build Confidence**
   - Practice your streaming skills with AI viewers
@@ -167,6 +145,87 @@ This compiles the TypeScript code and runs the optimized version.
 
 </details>
 
+## 🤖 How It Works
+
+### Architecture Overview
+
+```mermaid
+graph TD
+    A[Twitch Stream] --> B[Voice Capture]
+    B --> C[Audio Processing]
+    C --> D[Transcription]
+    D --> E[AI Analysis]
+    E --> F[Message Generation]
+    F --> G[Chat Interaction]
+    H[Game Context] --> E
+    I[Chat History] --> E
+```
+
+### Core Components
+
+1. **Voice Capture & Processing**
+   - Uses FFmpeg to capture stream audio
+   - Processes audio in real-time chunks
+   - Supports multiple audio formats
+   - Handles noise reduction and quality optimization
+
+2. **Speech Recognition**
+   - Real-time transcription using Groq's Whisper model
+   - Multi-language support
+   - Context-aware transcription
+   - Handles background noise and stream quality variations
+
+3. **AI Message Generation**
+   - Context-aware responses using Groq's LLM
+   - Game-specific knowledge integration
+   - Natural conversation flow
+   - Smart emoji usage (20% of messages)
+   - Anti-spam and rate limiting
+
+4. **Chat Interaction**
+   - Multiple bot support
+   - Natural conversation patterns
+   - Context-aware responses
+   - Anti-spam measures
+   - Rate limiting and cooldowns
+
+### Message Generation Process
+
+1. **Context Gathering**
+   - Current game information
+   - Streamer's commentary
+   - Chat history
+   - Viewer count
+   - Stream title and description
+
+2. **Response Types**
+   - Game-specific comments
+   - Stream interaction
+   - General engagement
+   - Questions and discussions
+   - Reactions to stream events
+
+3. **Quality Control**
+   - Message length limits
+   - Emoji frequency control
+   - Natural conversation patterns
+   - Context relevance
+   - Anti-spam measures
+
+### Performance Considerations
+
+- **Resource Usage**
+  - Optimized audio processing
+  - Efficient memory management
+  - Smart caching of transcriptions
+  - Rate limiting for API calls
+
+- **Scalability**
+  - Multiple bot support
+  - Configurable message intervals
+  - Adjustable processing parameters
+  - Error handling and recovery
+
 ## ⚙️ Configuration
 
 ### Environment Variables
@@ -259,7 +318,7 @@ This project is licensed under the ISC License. See the [LICENSE](LICENSE) file 
 
 <div align="center">
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/p6X5R3p9)
 [![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gsilvamartin/twitch-ai-viewers/issues)
 
 </div>
@@ -268,6 +327,6 @@ This project is licensed under the ISC License. See the [LICENSE](LICENSE) file 
 
 <div align="center">
 
-Made with ❤️ by [Your Name](https://github.com/gsilvamartin)
+Made with ❤️ by [Guilherme Martin](https://github.com/gsilvamartin)
 
 </div>
