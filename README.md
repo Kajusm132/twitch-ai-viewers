@@ -69,10 +69,15 @@ Create a `.env` file in the project root with:
 # Twitch Credentials
 TWITCH_CLIENT_ID=your_client_id
 TWITCH_CLIENT_SECRET=your_client_secret
+TWITCH_CHANNEL=your_channel_name
 
 # Bot Settings
-BOT_USERNAME=your_bot_username
-BOT_OAUTH_TOKEN=oauth:your_token
+# You can add multiple bots by using the prefix BOT1_, BOT2_, etc.
+BOT1_USERNAME=your_bot_username
+BOT1_OAUTH_TOKEN=oauth:your_token
+# Example for second bot:
+# BOT2_USERNAME=your_second_bot_username
+# BOT2_OAUTH_TOKEN=oauth:your_second_token
 
 # AI Settings
 GROQ_API_KEY=your_groq_api_key
