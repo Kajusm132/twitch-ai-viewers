@@ -38,15 +38,30 @@
 
 <div align="center">
 
-| Step | Action | Details |
-|------|--------|---------|
-| 1. Prerequisites | Requirements | [Node.js](https://nodejs.org/) (v14+), [Twitch Dev Account](https://dev.twitch.tv/console), [Groq API Key](https://groq.com/) |
-| 2. Installation | Clone & Setup | ```bash
+### 📋 Prerequisites
+
+| Requirement | Description | Link |
+|------------|-------------|------|
+| Node.js | Version 14 or higher | [Download](https://nodejs.org/) |
+| Twitch Developer Account | For API access | [Register](https://dev.twitch.tv/console) |
+| Groq API Key | For AI services | [Sign Up](https://groq.com/) |
+
+### 🔧 Installation
+
+1. **Clone the repository**
+```bash
 git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
 cd twitch-ai-viewers
+```
+
+2. **Install dependencies**
+```bash
 npm install
-``` |
-| 3. Configuration | Environment | Create `.env` file with:
+```
+
+3. **Configure environment**
+Create a `.env` file in the project root with the following content:
+
 ```env
 # Twitch Credentials
 TWITCH_CLIENT_ID=your_client_id
@@ -63,10 +78,25 @@ ORIGINAL_STREAM_LANGUAGE=en
 # Time Settings
 TRANSCRIPT_DURATION=60000
 MESSAGE_INTERVAL=5000
-``` |
-| 4. Run | Development | ```bash
+```
+
+4. **Start the application**
+```bash
+# Development mode
 npm run dev
-``` |
+
+# Production mode
+npm run build
+npm start
+```
+
+### ⚙️ Configuration Options
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| `TRANSCRIPT_DURATION` | Audio chunk length in milliseconds | 60000 |
+| `MESSAGE_INTERVAL` | Minimum time between messages in milliseconds | 5000 |
+| `ORIGINAL_STREAM_LANGUAGE` | Stream language for transcription | en |
 
 </div>
 
