@@ -5,7 +5,7 @@
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
-[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord)](https://discord.gg/p6X5R3p9)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA)](https://discord.gg/p6X5R3p9)
 
 > 🎥 **Never Stream Alone Again!** Twitch AI Viewers is your perfect companion for those early streaming days. Whether you're just starting out or looking to make your stream more engaging, this bot provides intelligent, context-aware viewers that interact naturally with your content.
 
@@ -41,9 +41,32 @@
 | Step | Action | Details |
 |------|--------|---------|
 | 1. Prerequisites | Requirements | [Node.js](https://nodejs.org/) (v14+), [Twitch Dev Account](https://dev.twitch.tv/console), [Groq API Key](https://groq.com/) |
-| 2. Installation | Clone & Setup | ```bash<br>git clone https://github.com/gsilvamartin/twitch-ai-viewers.git<br>cd twitch-ai-viewers<br>npm install``` |
-| 3. Configuration | Environment | Create `.env` file with:<br><br>```env<br># Twitch Credentials<br>TWITCH_CLIENT_ID=your_client_id<br>TWITCH_CLIENT_SECRET=your_client_secret<br><br># Bot Settings<br>BOT_USERNAME=your_bot_username<br>BOT_OAUTH_TOKEN=oauth:your_token<br><br># AI Settings<br>GROQ_API_KEY=your_groq_api_key<br>ORIGINAL_STREAM_LANGUAGE=en<br><br># Time Settings<br>TRANSCRIPT_DURATION=60000<br>MESSAGE_INTERVAL=5000``` |
-| 4. Run | Development | ```bash<br>npm run dev``` |
+| 2. Installation | Clone & Setup | ```bash
+git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
+cd twitch-ai-viewers
+npm install
+``` |
+| 3. Configuration | Environment | Create `.env` file with:
+```env
+# Twitch Credentials
+TWITCH_CLIENT_ID=your_client_id
+TWITCH_CLIENT_SECRET=your_client_secret
+
+# Bot Settings
+BOT_USERNAME=your_bot_username
+BOT_OAUTH_TOKEN=oauth:your_token
+
+# AI Settings
+GROQ_API_KEY=your_groq_api_key
+ORIGINAL_STREAM_LANGUAGE=en
+
+# Time Settings
+TRANSCRIPT_DURATION=60000
+MESSAGE_INTERVAL=5000
+``` |
+| 4. Run | Development | ```bash
+npm run dev
+``` |
 
 </div>
 
@@ -120,40 +143,10 @@ graph TD
 | Step | Action | Command |
 |------|--------|---------|
 | 1. Fork | Create your copy | Click "Fork" button |
-| 2. Branch | Create feature branch | ```bash<br>git checkout -b feature/AmazingFeature``` |
-| 3. Commit | Save your changes | ```bash<br>git commit -m 'Add some AmazingFeature'``` |
-| 4. Push | Upload changes | ```bash<br>git push origin feature/AmazingFeature``` |
+| 2. Branch | Create feature branch | ```git checkout -b feature/AmazingFeature``` |
+| 3. Commit | Save your changes | ```git commit -m 'Add some AmazingFeature'``` |
+| 4. Push | Upload changes | ```git push origin feature/AmazingFeature``` |
 | 5. PR | Create Pull Request | Click "New Pull Request" |
-
-</div>
-
-## 📄 License
-
-<div align="center">
-
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
-
-</div>
-
-## 🙏 Acknowledgments
-
-<div align="center">
-
-| Service | Description | Link |
-|---------|-------------|------|
-| Twitch | Streaming Platform | [Visit](https://www.twitch.tv/) |
-| Groq | AI Services | [Visit](https://groq.com/) |
-| FFmpeg | Audio Processing | [Visit](https://ffmpeg.org/) |
-| Open Source | Community | [Join](https://github.com/gsilvamartin/twitch-ai-viewers) |
-
-</div>
-
-## 📞 Support
-
-<div align="center">
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/p6X5R3p9)
-[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gsilvamartin/twitch-ai-viewers/issues)
 
 </div>
 
