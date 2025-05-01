@@ -38,29 +38,32 @@
 
 <div align="center">
 
-### 📋 Prerequisites
+### 📋 What You'll Need
 
-| Requirement | Description | Link |
-|------------|-------------|------|
+| 🛠️ Tool | 📝 Description | 🔗 Link |
+|---------|---------------|---------|
 | Node.js | Version 14 or higher | [Download](https://nodejs.org/) |
-| Twitch Developer Account | For API access | [Register](https://dev.twitch.tv/console) |
+| Twitch Dev Account | For API access | [Register](https://dev.twitch.tv/console) |
 | Groq API Key | For AI services | [Sign Up](https://groq.com/) |
 
-### 🔧 Installation
+### 🛠️ Installation Steps
 
-1. **Clone the repository**
+<div align="left">
+
+#### 1️⃣ Clone & Setup
 ```bash
+# Clone the repository
 git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
-cd twitch-ai-viewers
-```
 
-2. **Install dependencies**
-```bash
+# Navigate to project directory
+cd twitch-ai-viewers
+
+# Install dependencies
 npm install
 ```
 
-3. **Configure environment**
-Create a `.env` file in the project root with the following content:
+#### 2️⃣ Configuration
+Create a `.env` file in the project root with:
 
 ```env
 # Twitch Credentials
@@ -80,23 +83,28 @@ TRANSCRIPT_DURATION=60000
 MESSAGE_INTERVAL=5000
 ```
 
-4. **Start the application**
-```bash
-# Development mode
-npm run dev
+#### 3️⃣ Running the Application
 
-# Production mode
+**Development Mode**
+```bash
+npm run dev
+```
+
+**Production Mode**
+```bash
 npm run build
 npm start
 ```
 
-### ⚙️ Configuration Options
+</div>
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `TRANSCRIPT_DURATION` | Audio chunk length in milliseconds | 60000 |
-| `MESSAGE_INTERVAL` | Minimum time between messages in milliseconds | 5000 |
-| `ORIGINAL_STREAM_LANGUAGE` | Stream language for transcription | en |
+### ⚙️ Configuration Guide
+
+| 🔧 Setting | 📝 Description | ⏱️ Default |
+|------------|---------------|------------|
+| `TRANSCRIPT_DURATION` | Audio processing duration (ms) | 60000 |
+| `MESSAGE_INTERVAL` | Time between messages (ms) | 5000 |
+| `ORIGINAL_STREAM_LANGUAGE` | Stream language | en |
 
 </div>
 
