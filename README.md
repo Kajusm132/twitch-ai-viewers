@@ -1,52 +1,66 @@
-# Twitch AI Viewers 🤖
+<div align="center">
 
-A powerful Node.js application that simulates multiple AI-powered viewers in Twitch chat, creating a more engaging and interactive streaming experience.
+# 🎮 Twitch AI Viewers 🤖
+
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord)](https://discord.gg/p6X5R3p9)
+
+> 🎥 **Never Stream Alone Again!** Twitch AI Viewers is your perfect companion for those early streaming days. Whether you're just starting out or looking to make your stream more engaging, this bot provides intelligent, context-aware viewers that interact naturally with your content.
+
+> 🤖 **Your First Virtual Audience** - Perfect for new streamers who want to build confidence and create a welcoming atmosphere. The AI viewers engage with your content, respond to your commentary, and help create a more dynamic streaming experience.
+
+> 💡 **Why Use Twitch AI Viewers?**
+> - 🎯 Perfect for new streamers building their community
+> - 🤝 Never feel like you're talking to an empty chat
+> - 🎮 Natural interactions that respond to your gameplay
+> - 🎤 Context-aware responses to your commentary
+> - 🌟 Create a more engaging streaming environment
+
+![Twitch AI Viewers Demo](https://via.placeholder.com/800x400?text=Twitch+AI+Viewers+Demo)
+
+</div>
 
 ## ✨ Features
 
-- **Real-time Chat Interaction**
-  - AI-powered viewers that respond naturally to stream content
-  - Context-aware responses based on game and streamer commentary
-  - Natural conversation flow with other viewers
+<div align="center">
 
-- **Voice Recognition**
-  - Real-time transcription of streamer's voice
-  - Contextual responses to streamer's commentary
-  - Multi-language support
+| 🎤 Audio Processing | 🤖 AI Integration | 💬 Chat Interaction | ⚙️ Configuration |
+|-------------------|------------------|-------------------|-----------------|
+| Real-time capture | Smart transcription | Natural responses | Flexible settings |
+| Auto format conversion | Context-aware messages | Emoji support | Easy setup |
+| Noise reduction | Multi-language support | Anti-spam system | Error handling |
 
-- **Smart Engagement**
-  - Game-specific comments and questions
-  - Natural emoji usage (20% of messages)
-  - Varied response types based on stream context
+</div>
 
-- **Customizable Settings**
-  - Adjustable message frequency
-  - Configurable response types
-  - Multiple bot support
+## 🎯 Perfect For
 
-## 🎯 Benefits
+<div align="center">
 
-- **Build Confidence**
-  - Practice your streaming skills with AI viewers
-  - Get comfortable with live commentary
-  - Develop your unique streaming style
+| 👶 New Streamers | 🎮 Small Communities | 🎥 Content Creators | 🌍 Language Learners |
+|----------------|-------------------|-------------------|-------------------|
+| Build confidence with your first virtual audience | Keep your chat active and engaging | Test new content with AI feedback | Practice streaming in different languages |
+| Learn streaming basics with AI support | Create a welcoming atmosphere | Get instant reactions to your content | Improve language skills while streaming |
+| Overcome initial streaming anxiety | Grow your community naturally | Experiment with different styles | Connect with international viewers |
 
-- **Engage Your Audience**
-  - Create a more dynamic chat environment
-  - Keep the conversation flowing
-  - Make your stream more interactive
+</div>
 
-- **Improve Your Content**
-  - Get instant feedback on your commentary
-  - Test different streaming approaches
-  - Learn what works best for your audience
+## 🌟 Key Benefits
 
-- **Grow Your Community**
-  - Create a welcoming atmosphere for new viewers
-  - Maintain chat activity during slow periods
-  - Build momentum for your stream
+<div align="center">
+
+| 🎯 Build Confidence | 🤝 Engage Audience | 📈 Improve Content | 🌱 Grow Community |
+|-------------------|------------------|------------------|-----------------|
+| Practice streaming skills | Create dynamic chat | Get instant feedback | Welcome new viewers |
+| Develop commentary style | Keep conversation flowing | Test different approaches | Maintain chat activity |
+| Overcome streaming anxiety | Make stream interactive | Learn audience preferences | Build stream momentum |
+
+</div>
 
 ## 🚀 Quick Start
+
+<div align="center">
 
 ```bash
 # Clone the repository
@@ -60,37 +74,37 @@ npm install
 npm run dev
 ```
 
+</div>
+
 ## 📋 Prerequisites
 
-- **Node.js** (version 14 or higher)
-  - Download from [nodejs.org](https://nodejs.org/)
-  - Verify installation with `node --version`
+<div align="center">
 
-- **Twitch Developer Account**
-  - Register at [Twitch Developer Console](https://dev.twitch.tv/console)
-  - Create a new application
-  - Note your Client ID and Client Secret
+| Requirement | Description | Link |
+|------------|-------------|------|
+| Node.js | Version 14 or higher | [Download](https://nodejs.org/) |
+| Twitch Developer Account | For API access | [Register](https://dev.twitch.tv/console) |
+| Groq API Key | For AI services | [Sign Up](https://groq.com/) |
 
-- **Groq API Key**
-  - Sign up at [Groq](https://groq.com/)
-  - Generate an API key from your dashboard
+</div>
 
 ## 🔧 Installation
 
-1. **Clone the repository:**
+<div align="center">
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/gsilvamartin/twitch-ai-viewers.git
 cd twitch-ai-viewers
 ```
 
-2. **Install dependencies:**
+### 2. Install Dependencies
 ```bash
 npm install
 ```
-This will automatically install FFmpeg and all other required dependencies.
 
-3. **Configure environment variables:**
-Create a `.env` file in the project root with the following variables:
+### 3. Configure Environment
+Create `.env` file with:
 
 ```env
 # Twitch Credentials
@@ -103,51 +117,18 @@ BOT_OAUTH_TOKEN=oauth:your_token
 
 # AI Settings
 GROQ_API_KEY=your_groq_api_key
-ORIGINAL_STREAM_LANGUAGE=en # or other language
+ORIGINAL_STREAM_LANGUAGE=en
 
 # Time Settings
-TRANSCRIPT_DURATION=60000 # duration in milliseconds
-MESSAGE_INTERVAL=5000 # interval between messages in milliseconds
+TRANSCRIPT_DURATION=60000
+MESSAGE_INTERVAL=5000
 ```
 
-## 🎮 Usage
-
-### Development Mode
-```bash
-npm run dev
-```
-This starts the bot with hot-reloading enabled, perfect for development and testing.
-
-### Production Mode
-```bash
-npm run build
-npm start
-```
-This compiles the TypeScript code and runs the optimized version.
-
-### Advanced Usage
-
-<details>
-<summary>📊 Customizing Message Generation</summary>
-
-- Adjust `MESSAGE_INTERVAL` to control how often the bot sends messages
-- Modify `TRANSCRIPT_DURATION` to change audio chunk size
-- Set `ORIGINAL_STREAM_LANGUAGE` to match the stream's language
-
-</details>
-
-<details>
-<summary>👀 Monitoring</summary>
-
-- Check the console for real-time logs
-- Monitor message generation and audio processing
-- View error reports and system status
-
-</details>
+</div>
 
 ## 🤖 How It Works
 
-### Architecture Overview
+<div align="center">
 
 ```mermaid
 graph TD
@@ -161,101 +142,38 @@ graph TD
     I[Chat History] --> E
 ```
 
+</div>
+
 ### Core Components
 
-1. **Voice Capture & Processing**
-   - Uses FFmpeg to capture stream audio
-   - Processes audio in real-time chunks
-   - Supports multiple audio formats
-   - Handles noise reduction and quality optimization
+<div align="center">
 
-2. **Speech Recognition**
-   - Real-time transcription using Groq's Whisper model
-   - Multi-language support
-   - Context-aware transcription
-   - Handles background noise and stream quality variations
+| Component | Description | Features |
+|-----------|-------------|----------|
+| Voice Capture | Audio Processing | FFmpeg, Real-time, Multi-format |
+| Speech Recognition | Transcription | Whisper, Multi-language, Noise handling |
+| AI Message Generation | Response Creation | Context-aware, Game-specific, Natural flow |
+| Chat Interaction | Message Delivery | Multiple bots, Anti-spam, Rate limiting |
 
-3. **AI Message Generation**
-   - Context-aware responses using Groq's LLM
-   - Game-specific knowledge integration
-   - Natural conversation flow
-   - Smart emoji usage (20% of messages)
-   - Anti-spam and rate limiting
-
-4. **Chat Interaction**
-   - Multiple bot support
-   - Natural conversation patterns
-   - Context-aware responses
-   - Anti-spam measures
-   - Rate limiting and cooldowns
-
-### Message Generation Process
-
-1. **Context Gathering**
-   - Current game information
-   - Streamer's commentary
-   - Chat history
-   - Viewer count
-   - Stream title and description
-
-2. **Response Types**
-   - Game-specific comments
-   - Stream interaction
-   - General engagement
-   - Questions and discussions
-   - Reactions to stream events
-
-3. **Quality Control**
-   - Message length limits
-   - Emoji frequency control
-   - Natural conversation patterns
-   - Context relevance
-   - Anti-spam measures
-
-### Performance Considerations
-
-- **Resource Usage**
-  - Optimized audio processing
-  - Efficient memory management
-  - Smart caching of transcriptions
-  - Rate limiting for API calls
-
-- **Scalability**
-  - Multiple bot support
-  - Configurable message intervals
-  - Adjustable processing parameters
-  - Error handling and recovery
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-| Category | Variable | Description |
-|----------|----------|-------------|
-| Twitch | `TWITCH_CLIENT_ID` | Your Twitch application Client ID |
-| Twitch | `TWITCH_CLIENT_SECRET` | Your Twitch application Client Secret |
-| Bot | `BOT_USERNAME` | The username of your bot account |
-| Bot | `BOT_OAUTH_TOKEN` | OAuth token (format: oauth:xxxxxxxx) |
-| AI | `GROQ_API_KEY` | Your Groq API key |
-| AI | `ORIGINAL_STREAM_LANGUAGE` | Stream language (default: 'en') |
-| Timing | `TRANSCRIPT_DURATION` | Audio chunk length in ms (default: 60000) |
-| Timing | `MESSAGE_INTERVAL` | Message interval in ms (default: 5000) |
+</div>
 
 ## 🛠️ Tech Stack
 
 <div align="center">
 
-| Category | Technology |
-|----------|------------|
-| Runtime | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) |
-| Language | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) |
-| Audio | ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white) |
-| AI | ![Groq](https://img.shields.io/badge/Groq-00A67E?style=for-the-badge&logo=groq&logoColor=white) |
-| Chat | ![Twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white) |
+| Category | Technology | Badge |
+|----------|------------|-------|
+| Runtime | Node.js | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) |
+| Language | TypeScript | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) |
+| Audio | FFmpeg | ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white) |
+| AI | Groq | ![Groq](https://img.shields.io/badge/Groq-00A67E?style=for-the-badge&logo=groq&logoColor=white) |
+| Chat | Twitch | ![Twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white) |
 
 </div>
 
 ## 📝 Project Structure
+
+<div align="center">
 
 ```plaintext
 twitch-ai-viewers/
@@ -269,9 +187,16 @@ twitch-ai-viewers/
 └── .env                 # Configuration file (not versioned)
 ```
 
+</div>
+
 ## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+<div align="center">
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
+[![Open Issues](https://img.shields.io/github/issues/gsilvamartin/twitch-ai-viewers?style=for-the-badge)](https://github.com/gsilvamartin/twitch-ai-viewers/issues)
+
+</div>
 
 1. **Fork the project**
 2. **Create your feature branch**
@@ -291,26 +216,24 @@ git push origin feature/AmazingFeature
 
 5. **Open a Pull Request**
 
-### Development Guidelines
-- Follow TypeScript best practices
-- Write clear commit messages
-- Include tests for new features
-- Update documentation as needed
-
 ## 📄 License
 
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
+<div align="center">
+
+[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
+
+</div>
 
 ## 🙏 Acknowledgments
 
 <div align="center">
 
-| Service | Description |
-|---------|-------------|
-| [Twitch](https://www.twitch.tv/) | For the amazing streaming platform and API |
-| [Groq](https://groq.com/) | For the powerful AI services |
-| [FFmpeg](https://ffmpeg.org/) | For robust audio processing |
-| Open Source Community | For their invaluable contributions |
+| Service | Description | Link |
+|---------|-------------|------|
+| Twitch | Streaming Platform | [Visit](https://www.twitch.tv/) |
+| Groq | AI Services | [Visit](https://groq.com/) |
+| FFmpeg | Audio Processing | [Visit](https://ffmpeg.org/) |
+| Open Source | Community | [Join](https://github.com/gsilvamartin/twitch-ai-viewers) |
 
 </div>
 
